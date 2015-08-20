@@ -24,11 +24,11 @@ NeoBundle 'flazz/vim-colorschemes'
 
 " My plugins
 NeoBundle 'https://github.com/kien/ctrlp.vim'
+NeoBundle 'https://github.com/ivalkeen/vim-ctrlp-tjump'
 NeoBundle 'https://github.com/ervandew/ag'
 NeoBundle 'https://github.com/yegappan/mru'
 NeoBundle 'https://github.com/vim-scripts/gtags.vim'
 NeoBundle 'https://github.com/bronson/vim-trailing-whitespace'
-
 
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
@@ -62,4 +62,10 @@ au BufRead,BufNewFile *.h set filetype=c
 set spell spelllang=en_us
 hi clear SpellBad
 hi SpellBad cterm=underline ctermfg=red
+
+" CtrlP asssisting mappings
+nnoremap <c-]> :CtrlPtjump<cr>
+vnoremap <c-]> :CtrlPtjumpVisual<cr>
+nmap <c-j> :CtrlP<CR><C-\>w
+vmap <c-j> y:CtrlP<CR><C-\>c
 
